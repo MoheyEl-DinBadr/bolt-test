@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
     import { useNavigate, Navigate, Routes, Route } from 'react-router-dom';
-    import userManager from './auth';
-    import LoginPage from './pages/LoginPage';
-    import ProtectedRoute from './components/ProtectedRoute';
+    import userManager from './auth.ts';
+    import LoginPage from './pages/LoginPage.tsx';
+    import ProtectedRoute from './components/ProtectedRoute.tsx';
 
     const App: React.FC = () => {
       const navigate = useNavigate();
@@ -19,11 +19,11 @@ import React, { useEffect } from 'react';
       }, [navigate]);
 
       return (
-        &lt;Routes&gt;
-          &lt;Route path="/login" element=&lt;LoginPage /&gt; /&gt;
-          &lt;Route path="/" element=&lt;ProtectedRoute&gt;&lt;h1&gt;Welcome to the Test App&lt;/h1&gt;&lt;/ProtectedRoute&gt; /&gt;
+        <Routes>
+          <Route path="/login" element=<LoginPage /> />
+          <Route path="/" element=<ProtectedRoute><h1>Welcome to the Test App</h1></ProtectedRoute> />
           {/* Add more protected routes here */}
-        &lt;/Routes&gt;
+        </Routes>
       );
     };
 

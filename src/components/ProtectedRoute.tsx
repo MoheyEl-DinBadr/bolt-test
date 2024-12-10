@@ -1,12 +1,12 @@
 import React from 'react';
     import { Navigate } from 'react-router-dom';
-    import userManager from '../auth';
+    import userManager from '../auth.ts';
 
-    const ProtectedRoute: React.FC&lt;{ children: JSX.Element }&gt; = ({ children }) =&gt; {
+    const ProtectedRoute: React.FC<{ children: JSX.Element }> = ({ children }) => {
       const user = userManager.getUser();
 
       if (!user) {
-        return &lt;Navigate to="/login" replace /&gt;;
+        return <Navigate to="/login" replace />;
       }
 
       return children;

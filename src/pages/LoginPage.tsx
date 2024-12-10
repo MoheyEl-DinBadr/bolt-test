@@ -1,6 +1,6 @@
 import React from 'react';
     import { Button } from '@mui/material';
-    import userManager from '../auth';
+    import userManager from '../auth.ts';
 
     const LoginPage: React.FC = () => {
       const login = async () => {
@@ -13,11 +13,11 @@ import React from 'react';
       };
 
       return (
-        &lt;div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}&gt;
-          &lt;Button variant="contained" color="primary" onClick={login}&gt;
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+          <Button variant="contained" color="primary" onClick={login}>
             Login
-          &lt;/Button&gt;
-        &lt;/div&gt;
+          </Button>
+        </div>
       );
     };
 
